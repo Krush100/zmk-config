@@ -25,7 +25,7 @@
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSPC
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp PRSC    &kp DEL &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                       &kp LALT &kp SPACE &mo 1  &kp SPACE   &kp RET  &mo 2  &kp RGUI &kp CAPS
+                       &kp LALT &kp SPACE &mo 1  &kp SPACE   &kp RET  &mo 2 &kp CAPS &kp RGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -33,17 +33,17 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// | KSLEEP|     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |       |       |      |       |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |        |
+// | KSLEEP|     |     |      |      |      |                   |      |       |       |      |       |        |
+// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   | "|"  |   ~   |   +   |  {   |   }   |  PGUP  |
+// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |      |       |       |      |       |  PGDN  |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans    &trans    &trans          &trans    &trans    &trans
-&kp K_SLEEP &trans &trans &trans  &trans  &trans                       &trans    &trans   &trans         &trans   &trans   &trans
-&kp F1      &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&kp F7      &kp F8 &kp F9 &kp F10 &kp F11 &kp F12  &trans    &trans    &kp       &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                         &trans  &trans  &trans    &trans    &trans    &trans    &trans    &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans    &trans     &trans    &trans    &trans   &trans
+&kp K_SLEEP &trans &trans &trans  &trans  &trans                            &trans    &trans     &trans    &trans    &trans   &trans
+&kp F1      &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                            &kp PIPE  &kp GRAVE  &kp PLUS  &kp LBRC  &kp RBRC &kp PG_DN
+&kp F7      &kp F8 &kp F9 &kp F10 &kp F11 &kp F12  &trans         &trans    &trans    &trans     &trans    &trans    &trans   &kp PG_UP
+                         &trans  &trans  &trans    &trans         &trans    &trans    &trans     &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
